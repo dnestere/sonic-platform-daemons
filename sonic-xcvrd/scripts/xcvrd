@@ -260,17 +260,17 @@ def post_port_sfp_info_to_db(logical_port_name, table, transceiver_dict,
                                                   ('serial', port_info_dict['serial']),
                                                   ('manufacturer', port_info_dict['manufacturer']),
                                                   ('model', port_info_dict['model']),
-                                                  ('vendor_oui',port_info_dict['vendor_oui']),
-                                                  ('vendor_date',port_info_dict['vendor_date']),
-                                                  ('connector',port_info_dict['connector']),
-                                                  ('encoding',port_info_dict['encoding']),
-                                                  ('ext_identifier',port_info_dict['ext_identifier']),
-                                                  ('ext_rateselect_compliance',port_info_dict['ext_rateselect_compliance']),
-                                                  ('cable_type',port_info_dict['cable_type']),
+                                                  ('vendor_oui', port_info_dict['vendor_oui']),
+                                                  ('vendor_date', port_info_dict['vendor_date']),
+                                                  ('connector', port_info_dict['connector']),
+                                                  ('encoding', port_info_dict['encoding']),
+                                                  ('ext_identifier', port_info_dict['ext_identifier']),
+                                                  ('ext_rateselect_compliance', port_info_dict['ext_rateselect_compliance']),
+                                                  ('cable_type', port_info_dict['cable_type']),
                                                   ('cable_length', str(port_info_dict['cable_length'])),
                                                   ('specification_compliance',port_info_dict['specification_compliance']),
                                                   ('nominal_bit_rate', str(port_info_dict['nominal_bit_rate'])),
-                                                  ('application_advertisement',port_info_dict['application_advertisement'] if 'application_advertisement' in port_info_dict else 'N/A')])
+                                                  ('application_advertisement', port_info_dict['application_advertisement'] if 'application_advertisement' in port_info_dict else 'N/A')])
                 table.set(port_name, fvs)
             else:
                 return SFP_EEPROM_NOT_READY
